@@ -17,6 +17,7 @@ module.exports = {
       rules: {
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-interface": "off",
         // Add other rules to disable only in production
       },
     },
