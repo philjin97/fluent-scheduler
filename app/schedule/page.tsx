@@ -26,7 +26,7 @@ export default function Page() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const URL = "http://43.201.252.152/schedules/";
+  const URL = "https://43.201.252.152/schedules/";
   const [classes, setClasses] = useState<any[]>([]); // classes의 타입 정의
 
   useEffect(() => {
