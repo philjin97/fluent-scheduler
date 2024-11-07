@@ -3,7 +3,10 @@
 // }
 
 module.exports = {
-  // existing config...
+  extends: [
+    'next/core-web-vitals',  // Ensures core Next.js web vitals rules
+    'next/typescript',       // TypeScript rules for Next.js
+  ],
   overrides: [
     {
       files: ["**/*.ts", "**/*.tsx"], // Or any specific files you'd like to target
