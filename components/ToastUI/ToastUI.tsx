@@ -167,7 +167,7 @@ const ToastUI: React.FC<ToastUIProps> = ({ data }) => {
     });
 
     // clickEvent 이벤트 리스너 추가
-    calendarInstanceRef.current.on("clickEvent", ({ event }) => {
+    calendarInstanceRef.current.on("clickEvent", ({ event }: { event: any }) => {
       const el = document.getElementById("clicked-event");
       if (el) {
         el.innerText = event.title; // 클릭한 이벤트의 제목 표시
