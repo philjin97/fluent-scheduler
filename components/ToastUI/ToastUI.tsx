@@ -19,7 +19,7 @@ interface ToastUIProps {
 
 const ToastUI: React.FC<ToastUIProps> = ({ data }) => {
   const calendarContainerRef = useRef<HTMLDivElement>(null);
-  const calendarInstanceRef = useRef<Calendar | null>(null);
+  const calendarInstanceRef = useRef<typeof Calendar | null>(null);
   const [scheduleData, setScheduleData] = useState([]);
 
   //시간췌크

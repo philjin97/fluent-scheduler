@@ -8,7 +8,8 @@ module.exports = {
     {
       files: ["**/*.ts", "**/*.tsx"], // Or any specific files you'd like to target
       env: {
-        production: true,
+        browser: true,  // for client-side code
+        node: true,     // for server-side code (like Next.js)
       },
       rules: {
         "@typescript-eslint/no-unused-vars": "off",
