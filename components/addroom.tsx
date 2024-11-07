@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card"; 
 import { Input } from "@/components/ui/input";
 import {
   Select,

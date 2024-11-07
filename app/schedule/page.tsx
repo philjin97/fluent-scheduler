@@ -1,12 +1,18 @@
 "use client";
 
-import EnterButton from "../../components/EnterButton/EnterButton";
+import EnterButton from "@/components/EnterButton/EnterButton";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ToastUI from "../../components/ToastUI/ToastUI";
+// import ToastUI from "@/components/ToastUI/ToastUI";
 import "react-day-picker/dist/style.css";
 import AddRoom from "@/components/addroom";
+import dynamic from 'next/dynamic';
+
+
+
+
+const ToastUI = dynamic(() => import('@/components/ToastUI/ToastUI'), { ssr: false });
 
 export default function Page() {
   const [room_name, setRoomName] = useState(""); // room_name 상태 추가
