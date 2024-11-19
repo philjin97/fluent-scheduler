@@ -42,7 +42,7 @@ export default function AddRoom({ closeModal }: ScheduleModalProps) {
       : "";
 
     const all_rooms = await fetch(
-      `https://43.201.252.152/schedules/search_rooms/${formattedDate}/${time}/`
+      `http://127.0.0.1:8000/schedules/search_rooms/${formattedDate}/${time}/`
     );
     const json_all_rooms = await all_rooms.json();
 
@@ -73,7 +73,7 @@ export default function AddRoom({ closeModal }: ScheduleModalProps) {
         })
       : "";
 
-    const response = await fetch(`https://43.201.252.152/schedules/`, {
+    const response = await fetch(`http://127.0.0.1:8000/schedules/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export default function AddRoom({ closeModal }: ScheduleModalProps) {
 
     if (response.status == 200) {
       const currentSchedule = await fetch(
-        `https://43.201.252.152/schedules/oneday_oneteacher/${formattedDate}/${teacherName}`
+        `http://127.0.0.1:8000/schedules/oneday_oneteacher/${formattedDate}/${teacherName}`
       );
       const data_currentSchedule = await currentSchedule.json();
 
